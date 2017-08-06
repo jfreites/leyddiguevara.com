@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Catalog;
+use App\Product;
 use Illuminate\Http\Request;
 
 class CatalogController extends Controller
 {
-    public function detail($slug = false)
+    public function detail($slug)
     {
-        echo $slug;
-    }
+        $product = Product::whereSlug($slug)->first();
 
+        if (!$product) {
+            return back()->with('message', 'Producto no encontrado');
+        }
+
+        return view('site.listing.detail', compact('product'));
+    }
 }

@@ -58,7 +58,7 @@
                                                                 </div>
                                                             </div>
                                                             <h3 class="portfolio-title with-price">
-                                                                <a href="/products/product-demo-1" >{{ $product->name }}</a>
+                                                                <a href="/p/{{ $product->slug }}">{{ $product->name }}</a>
                                                                     {{--<span class="gdlr-port-price">
                                                                         <span class="woocommerce-Price-amount amount">
                                                                             <span class="woocommerce-Price-currencySymbol">&#36;</span>99.00</span>
