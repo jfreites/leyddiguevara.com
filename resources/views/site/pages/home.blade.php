@@ -23,7 +23,9 @@
                                     <div class="ms-layer  msp-cn-1-13" style="" data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="775" data-delay="1087" data-ease="easeOutQuint" data-offset-x="226" data-offset-y="19" data-origin="ml" data-position="normal">
                                         di G.</div>
                                     <div class="ms-layer  msp-cn-1-10" style="" data-duration="650" data-delay="1387" data-ease="easeOutQuint" data-offset-x="106" data-offset-y="117" data-origin="ml" data-position="normal">
-                                        Distribuidora exclusiva de Teosyal e Inno</div>
+                                        Asesor médico de CiruDerm <br>Distruidora exclusiva de Teosyal e Innoaesthetics</div>
+                                    <div class="ms-layer  msp-cn-1-10" style="" data-duration="650" data-delay="1387" data-ease="easeOutQuint" data-offset-x="106" data-offset-y="117" data-origin="ml" data-position="normal">
+                                        </div>
                                     <a href="#" target="_self" class="ms-layer  msp-cn-1-11 ms-btn ms-btn-box ms-btn-n msp-preset-btn-159" data-duration="625" data-delay="1587" data-ease="easeOutQuint" data-type="button" data-offset-x="175" data-offset-y="203" data-origin="ml" data-position="normal">
                                         ¡ULTIMAS PROMOCIONES!</a>
                                 </div>
