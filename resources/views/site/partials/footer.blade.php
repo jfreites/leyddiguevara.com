@@ -16,16 +16,16 @@
                 <div class="clear"></div>
                 <ul>
                     <li>
-                        <a href="index.html?p=2255">Sem Porta Mollis Parturient</a>
+                        <a href="#">Sem Porta Mollis Parturient</a>
                     </li>
                     <li>
-                        <a href="index.html?p=2254">Nullam Lorem Mattis Purus</a>
+                        <a href="#">Nullam Lorem Mattis Purus</a>
                     </li>
                     <li>
-                        <a href="index.html?p=2249">Nibh Sem Sit Ullamcorper</a>
+                        <a href="#">Nibh Sem Sit Ullamcorper</a>
                     </li>
                     <li>
-                        <a href="index.html?p=852">Donec luctus imperdiet</a>
+                        <a href="#">Donec luctus imperdiet</a>
                     </li>
                 </ul>
             </div>
@@ -35,12 +35,16 @@
                 <h3 class="gdlr-widget-title">Últimos productos</h3>
                 <div class="clear"></div>
                 <div class="gdlr-recent-port2-widget">
-                    <div class="recent-port-widget-thumbnail"><a href="index.html?p=4631"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/photodune-8600513-peaceful-brunette-getting-facial-from-beauty-therapist-in-the-health-spa-m-150x150.jpg" alt="" width="150" height="150" /></a></div>
-                    <div class="recent-port-widget-thumbnail"><a href="index.html?p=4630"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/Fotolia_24881759_Subscription_Monthly_XXL-150x150.jpg" alt="" width="150" height="150" /></a></div>
-                    <div class="recent-port-widget-thumbnail"><a href="index.html?p=4629"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/Fotolia_43785736_Subscription_Monthly_XL-150x150.jpg" alt="" width="150" height="150" /></a></div>
-                    <div class="recent-port-widget-thumbnail"><a href="index.html?p=4627"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/photodune-7064054-woman-face-and-beautician-hands-with-syringes-m-150x150.jpg" alt="" width="150" height="150" /></a></div>
-                    <div class="recent-port-widget-thumbnail"><a href="index.html?p=4625"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/photodune-3019155-chocolate-mask-facial-spa-beauty-spa-salon-m-150x150.jpg" alt="" width="150" height="150" /></a></div>
-                    <div class="recent-port-widget-thumbnail"><a href="index.html?p=4623"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/photodune-5179310-male-plastic-surgeon-with-patient-m-150x150.jpg" alt="" width="150" height="150" /></a></div>
+                    @php
+                        $products = \App\Product::orderBy('created_at')->limit(6)->get();
+                    @endphp
+                    @foreach($products as $prd)
+                    <div class="recent-port-widget-thumbnail">
+                        <a href="/{{ $prd->slug }}">
+                            <img src="/uploads/products/{{ $prd->feature_image or 'empty-img.png' }}" alt="{{ $prd->name }}" width="150" height="150" />
+                        </a>
+                    </div>
+                    @endforeach
                     <div class="clear"></div>
                 </div>
             </div>

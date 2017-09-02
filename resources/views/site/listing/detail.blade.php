@@ -36,31 +36,32 @@
                                     </div>
                                     <!-- .summary -->
                                     <div class="woocommerce-tabs wc-tabs-wrapper">
-                                        <ul class="tabs wc-tabs" role="tablist">
+                                        <!--<ul class="tabs wc-tabs" role="tablist">
                                             <li class="description_tab" id="tab-title-description" role="tab" aria-controls="tab-description">
                                                 <a href="#">Tratamiento</a>
                                             </li>
                                             <li class="description_tab" id="tab-title-ingredientes" role="tab" aria-controls="tab-ingredientes">
                                                 <a href="#">Ingredientes</a>
                                             </li>
-                                        </ul>
-                                        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                                            <h2>Tratamiento</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci aut cum dignissimos illo laboriosam unde voluptas. Assumenda consequuntur hic iusto modi mollitia neque nostrum quas suscipit totam, unde?</p>
-                                        </div>
-                                        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--ingredientes panel entry-content wc-tab" id="tab-ingredientes" role="tabpanel" aria-labelledby="tab-title-ingredientes">
-                                            <h2>Ingredientes</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci aut cum dignissimos illo laboriosam unde voluptas. Assumenda consequuntur hic iusto modi mollitia neque nostrum quas suscipit totam, unde?</p>
-                                        </div>
+                                        </ul>-->
+                                        @if(!empty($product->extra_fields))
+                                            @foreach(json_decode($product->extra_fields) as $extra => $value)
+                                                <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+                                                    <h2>{{ ucfirst($extra) }}</h2>
+                                                    <p>{{ $value }}</p>
+                                                </div>
+                                            @endforeach
+                                        @endif
                                     </div>
                                     <section class="related products">
                                         <h2>Productos relacionados</h2>
-                                        <ul class="products">
+                                        <p>No hay productos relacionados</p>
+                                        <!--<ul class="products">
                                             <li>Ninguno</li>
-                                        </ul>
+                                        </ul>-->
                                     </section>
                                 </div>
-                                <!-- #product-4764 -->
+                                <!-- end product detail -->
                             </div>
                         </div>
                     </div>
