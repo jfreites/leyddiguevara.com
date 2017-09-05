@@ -19,7 +19,6 @@ class CreateCmsContentTable extends Migration
             $table->integer('category_id');
             $table->string('title', '190')->nullable();
             $table->text('body')->nullable();
-            $table->string('title', '190')->nullable();
             $table->boolean('active')->default(0);
             $table->timestamps();
         });
