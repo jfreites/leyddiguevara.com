@@ -77,8 +77,8 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5309"><a href="/catalogo/?name=inno">Catálogo Inno</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5311menu-item menu-item-type-post_type menu-item-object-page menu-item-5311 gdlr-normal-menu"><a href="/noticias?cat=2">Promociones</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5169menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5169 gdlr-mega-menu"><a href="/noticias" class="sf-with-ul-pre">Noticias</a>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5311menu-item menu-item-type-post_type menu-item-object-page menu-item-5311 gdlr-normal-menu"><a href="/promociones/recientes">Promociones</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5169menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5169 gdlr-mega-menu"><a href="/noticias/recientes" class="sf-with-ul-pre">Noticias</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5262menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5262 gdlr-mega-menu"><a href="/contacto" class="sf-with-ul-pre">Contacto</a>
                         </li>
