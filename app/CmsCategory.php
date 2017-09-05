@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CmsCategory extends Model
 {
-	protected $table = 'Cms_Categories';
+	protected $table = 'cms_categories';
 
 	public function cms()
 	{
