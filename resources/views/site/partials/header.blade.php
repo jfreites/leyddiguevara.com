@@ -51,8 +51,8 @@
                                 <li id="menu-item-5309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5309"><a href="/catalogo/?name=inno">Inno</a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-5311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5311"><a href="/noticias?cat=2">Promociones</a></li>
-                        <li id="menu-item-5169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5169"><a href="/noticias">Noticias</a>
+                        <li id="menu-item-5311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5311"><a href="/promociones/recientes">Promociones</a></li>
+                        <li id="menu-item-5169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5169"><a href="/noticias/recientes">Noticias</a>
                         </li>
                         <li id="menu-item-5262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5262"><a href="/contacto">Contacto</a>
                         </li>
