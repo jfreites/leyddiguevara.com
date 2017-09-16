@@ -72,13 +72,22 @@
                         <div id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories gdlr-item gdlr-widget">
                             <h3 class="gdlr-widget-title">Productos por categoría</h3>
                             <div class="clear"></div>
+                            <?php
+                                $categories = \App\Category::whereCatalogId($product->catalog_id)->get();
+                            ?>
                             <ul class="product-categories">
-                                <li class="cat-item cat-item-63"><a href="#">Categoría 1</a></li>
-                                <li class="cat-item cat-item-64 current-cat"><a href="#">Categoria 2</a></li>
-                                <li class="cat-item cat-item-64"><a href="#">Categoria 3</a></li>
+                                @if(count($categories) > 0)
+                                    @foreach($categories as $category)
+                                        @if($category->parent_id == 0)
+                                        <li class="cat-item cat-item-{{ $category->id }}"><a href="#">{{ $category->name }}</a></li>
+                                        @endif
+                                    @endforeach
+                                @else
+                                    <p>No hay categorías en este momento</p>
+                                @endif
                             </ul>
                         </div>
-                        <div id="woocommerce_top_rated_products-2" class="widget woocommerce widget_top_rated_products gdlr-item gdlr-widget">
+                        {{--<div id="woocommerce_top_rated_products-2" class="widget woocommerce widget_top_rated_products gdlr-item gdlr-widget">
                             <h3 class="gdlr-widget-title">Productos más comprados</h3>
                             <div class="clear"></div>
                             <ul class="product_list_widget">
@@ -95,7 +104,7 @@
                                     <div class="star-rating"><span style="width:86.6%">Rateado <strong class="rating">4.33</strong> de 5</span></div>
                                 </li>
                             </ul>
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
                 <div class="clear"></div>
