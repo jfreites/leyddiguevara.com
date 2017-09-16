@@ -7,7 +7,11 @@
         <div class="with-sidebar-wrapper">
             <section id="content-section-1">
                 <!--<div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark" id="gdlr-parallax-wrapper-1" data-bgspeed="0.1" style="background-image: url('http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2015/05/title-bg-2.jpg'); padding-top: 245px; padding-bottom: 80px; ">-->
+                @if($catalog->id == 2)
                 <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark" id="gdlr-parallax-wrapper-1" data-bgspeed="0.1" style="background-image: url('/images/banner_products.jpg'); padding-top: 245px; padding-bottom: 80px; ">
+                @elseif($catalog->id == 1)
+                <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark" id="gdlr-parallax-wrapper-1" data-bgspeed="0.1" style="background-image: url('/images/banner_inno.jpg'); padding-top: 245px; padding-bottom: 80px; ">
+                @endif
                     <div class="container">
                         <div class="gdlr-title-item">
                             <div class="gdlr-item-title-container container ">

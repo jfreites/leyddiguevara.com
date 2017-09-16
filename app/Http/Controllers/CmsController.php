@@ -11,7 +11,8 @@ class CmsController extends Controller
     /**
      * Show requested page or 404.
      *
-     * @param bool $slug
+     * @param string $category
+     * @param bool   $slug
      *
      * @return \Illuminate\Http\Response
      */

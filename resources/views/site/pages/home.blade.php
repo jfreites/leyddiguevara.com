@@ -168,10 +168,26 @@
                     <div class="gdlr-item-title-container container gdlr-nav-container">
                         <div class="gdlr-item-title-wrapper gdlr-item pos-center ">
                             <div class="gdlr-item-title-head">
-                                <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Productos destacados</h3>
-                                <div class="gdlr-item-title-nav"><i class="icon-angle-left gdlr-flex-prev gdlra-skin-box"></i><i class="icon-angle-right gdlr-flex-next gdlra-skin-box"></i></div>
+                                <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Promociones especiales</h3>
                                 <div class="clear"></div>
-                            </div><a class="gdlr-item-title-link" href="#">Ver todos</a></div>
+                            </div>
+                        </div>
+
+                        <div style="width: 1110px; margin-bottom: 50px;">
+                            @foreach($promotions as $promotion)
+                                <div class="promotion-post-item">
+                                    <div style="width: 350px; height: 100%">
+                                        <a href="/promociones/{{ $promotion->slug }}">
+                                            <img src="/uploads/posts/{{ $promotion->banner }}" alt="{{ $promotion->title }}" />
+                                        </a>
+                                    </div>
+                                    <h5 class="portfolio-title">
+                                        <a href="/promociones/{{ $promotion->slug }}">{{ $promotion->title }}</a>
+                                    </h5>
+                                </div>
+                            @endforeach
+                        </div>
+
                     </div>
                     <div class="clear"></div>
                     <div class="clear"></div>
@@ -186,27 +202,32 @@
                         <div class="gdlr-item-title-container container gdlr-nav-container">
                             <div class="gdlr-item-title-wrapper gdlr-item pos-center ">
                                 <div class="gdlr-item-title-head">
-                                    <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Promociones Especiales</h3>
-                                    <div class="gdlr-item-title-nav"><i class="icon-angle-left gdlr-flex-prev gdlra-skin-box"></i><i class="icon-angle-right gdlr-flex-next gdlra-skin-box"></i></div>
+                                    <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Noticias destacadas</h3>
                                     <div class="clear"></div>
                                 </div>
+                                <a class="gdlr-item-title-link" href="/noticias/recientes">Ver todas</a>
                             </div>
                         </div>
+
                         <div class="portfolio-item-wrapper type-classic2-portfolio" data-ajax="#">
                             <div class="portfolio-item-holder  gdlr-portfolio-column-3">
                                 <div class="gdlr-portfolio-carousel-item gdlr-item">
                                     <div class="flexslider" data-type="carousel" data-nav-container="portfolio-item-wrapper" data-columns="3">
                                         <ul class="slides">
+                                            @foreach($posts as $post)
                                             <li class="gdlr-item gdlr-portfolio-item gdlr-classic2-portfolio">
-                                                <div class="portfolio-thumbnail gdlr-image"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2015/05/coupon-3.jpg" alt="" width="700" height="380" />
+                                                <div class="portfolio-thumbnail gdlr-image">
+                                                    <img src="/uploads/posts/{{ $post->banner }}" alt="" width="700" height="380" />
                                                     <div class="product-overlay-wrapper">
                                                         <div class="product-overlay"></div>
-                                                        <div class="product-overlay-content"><a class="product-overlay-cart add_to_cart_button product_type_simple" href="../skinbeauty.1#" rel="nofollow" data-product_id="4776" data-product_sku="" data-quantity="1"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/images/cart-light.png" alt="add-to-cart" ><span class="gdlr-title-font">Add to Cart</span></a><a class="product-overlay-link" href="index.html?p=4776"><i class="icon-link fa fa-link" ></i><span class="gdlr-title-font">Read More</span></a>
-                                                            <div class="clear"></div>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                                <h3 class="portfolio-title with-price"><a href="index.html?p=4776" >Essential Therapy Spa</a><span class="gdlr-port-price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>140.00</span></span></h3></li>
+                                                <h3 class="portfolio-title">
+                                                    <a href="/promociones/{{ $post->slug }}">{{ $post->title }}</a>
+                                                </h3>
+                                            </li>
+                                            @endforeach
+                                            <!--
                                             <li class="gdlr-item gdlr-portfolio-item gdlr-classic2-portfolio">
                                                 <div class="portfolio-thumbnail gdlr-image"><img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2015/05/coupon-2.jpg" alt="" width="700" height="380" />
                                                     <div class="product-overlay-wrapper">
@@ -237,12 +258,14 @@
                                                     </div>
                                                 </div>
                                                 <h3 class="portfolio-title with-price"><a href="index.html?p=4769" >Full Facial Package</a><span class="gdlr-port-price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>200.00</span></span></h3></li>
+                                            -->
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
                         </div>
+
                         <div class="clear"></div>
                         <div class="clear"></div>
                     </div>

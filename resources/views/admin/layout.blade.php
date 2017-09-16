@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Admin - Leyddi Guevara') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -28,9 +30,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Leyddi Guevara') }}
-                </a>
+                <a class="navbar-brand" href="{{ url('/') }}">Leyddi Guevara</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -46,9 +46,11 @@
                         <li><a href="{{ route('login') }}">Login</a></li>
                         <li><a href="{{ route('register') }}">Register</a></li>
                     @else
+                        <li><a href="/admin/banners">Banners</a></li>
                         <li><a href="#">Catálogo</a></li>
                         <li><a href="/admin/productos">Productos</a></li>
-                        <li class="dropdown">
+                        <li><a href="/admin/publicaciones">Publicaciones</a></li>
+                        <li class="dropdown" style="border-left: 1px solid #d3e0e9">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
@@ -78,6 +80,7 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
 @yield('scripts')
 </body>
 </html>

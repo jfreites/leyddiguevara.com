@@ -53,6 +53,9 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view('site.pages.home');
+        $promotions = \App\Cms::featured()->promotions()->limit(3)->get();
+        $posts = \App\Cms::featured()->news()->limit(3)->get();
+
+        return view('site.pages.home', compact('promotions', 'posts'));
     }
 }

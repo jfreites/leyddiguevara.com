@@ -128,31 +128,11 @@
 
 <!-- body-wrapper -->
 <script type="text/javascript"></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var wpcf7 = { "apiSettings": { "root": "http:\/\/demo.goodlayers.com\/skinbeauty\/wp-json\/", "namespace": "contact-form-7\/v1" }, "recaptcha": { "messages": { "empty": "Please verify that you are not a robot." } }, "cached": "1" };
-    /* ]]> */
-</script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=35814ae4bc89c6fb286ab0d6bf920312'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var wc_add_to_cart_params = { "ajax_url": "\/skinbeauty\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/skinbeauty\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "http:\/\/demo.goodlayers.com\/skinbeauty\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
-    /* ]]> */
-</script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/plugins/contact-form-7/includes/js/scripts.js'></script>
 <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.1.1'></script>
 <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
 <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var woocommerce_params = { "ajax_url": "\/skinbeauty\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/skinbeauty\/?wc-ajax=%%endpoint%%" };
-    /* ]]> */
-</script>
 <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.1.1'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var wc_cart_fragments_params = { "ajax_url": "\/skinbeauty\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/skinbeauty\/?wc-ajax=%%endpoint%%", "fragment_name": "wc_fragments_191ae6f8da1c9e85e406e7210f6b8258" };
-    /* ]]> */
-</script>
 <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.1.1'></script>
 <script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/superfish/js/superfish.js?ver=1.0'></script>
 <script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
@@ -160,16 +140,17 @@
 <script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/dl-menu/jquery.dlmenu.js?ver=1.0'></script>
 <script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/jquery.easing.js?ver=1.0'></script>
 <script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/fancybox/jquery.fancybox.pack.js?ver=1.0'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/fancybox/helpers/jquery.fancybox-media.js?ver=1.0'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/fancybox/helpers/jquery.fancybox-thumbs.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.6.1'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/jquery.isotope.min.js?ver=1.0'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/javascript/gdlr-script.js?ver=1.0'></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/fancybox/helpers/jquery.fancybox-media.js'></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/fancybox/helpers/jquery.fancybox-thumbs.js'></script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.4/jquery.flexslider-min.js"></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/jquery.isotope.min.js'></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/javascript/gdlr-script.js'></script>
 <script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-includes/js/wp-embed.min.js?ver=35814ae4bc89c6fb286ab0d6bf920312'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/plugins/masterslider/public/assets/js/masterslider.min.js?ver=3.1.3'></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/plugins/masterslider/public/assets/js/masterslider.min.js'></script>
 <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js?ver=3.1.6'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/jquery.transit.min.js?ver=1.0'></script>
-<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/plugins/gdlr-portfolio/gdlr-portfolio-script.js?ver=1.0'></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/plugins/jquery.transit.min.js'></script>
+<script type='text/javascript' src='http://cdn-second.goodlayers.com/skinbeauty/wp-content/plugins/gdlr-portfolio/gdlr-portfolio-script.js'></script>
 </body>
 
 </html>

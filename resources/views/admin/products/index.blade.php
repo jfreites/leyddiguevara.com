@@ -24,9 +24,9 @@
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->slug }}</td>
                                 <td><img src="/uploads/products/{{ $product->feature_image }}" height="100"></td>
-                                <td>
-                                    <a class="btn btn-warning" href="/admin/productos/{{ $product->id }}/editar">editar</a>
-                                    <a href="#" class="btn btn-danger delete-product" data-product="{{ $product->id }}">eliminar</a>
+                                <td style="text-align: center">
+                                    <a class="btn btn-warning" href="/admin/productos/{{ $product->id }}/editar"><i class="zmdi zmdi-edit"></i></a>
+                                    <a href="#" class="btn btn-danger delete-product" data-product="{{ $product->id }}"><i class="zmdi zmdi-delete"></i></a>
                                 </td>
                             </tr>
                             @endforeach

@@ -7,11 +7,11 @@
             </div>
             <div class="top-navigation-right">
                 <div class="top-navigation-right-text">
-                    <div class="gdlr-text-block"><i class="fa fa-envelope"></i>leyddiguevara@ciruderm.info</div>
-                    <div class="gdlr-text-block"><i class="fa fa-phone"></i>+52 12-3456-7890</div>
+                    <div class="gdlr-text-block"><i class="fa fa-envelope"></i><a href="mailto:leyddiguevara@ciruderm.info">leyddiguevara@ciruderm.info</a></div>
+                    <div class="gdlr-text-block"><i class="fa fa-phone"></i><a href="tel:5567913598">+52 55-6791-3598</a></div>
                 </div>
                 <div class="top-social-wrapper">
-                    <div class="social-icon">
+                    <!--<div class="social-icon">
                         <a href="../skinbeauty.1#" target="_blank">
                             <img width="32" height="32" src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/images/light/social-icon/facebook.png" alt="Facebook" />
                         </a>
@@ -20,7 +20,7 @@
                         <a href="../skinbeauty.1#" target="_blank">
                             <img width="32" height="32" src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/themes/skinbeauty/images/light/social-icon/twitter.png" alt="Twitter" />
                         </a>
-                    </div>
+                    </div>-->
                     <div class="clear"></div>
                 </div>
             </div>

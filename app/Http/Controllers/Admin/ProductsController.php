@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ProductsController extends Controller
 {
+    const CATALOG_INNO = 1;
+    const CATALOG_TEOSYAL = 2;
     /**
      * Create a new controller instance.
      *
@@ -26,23 +29,47 @@ class ProductsController extends Controller
 
     public function create()
     {
-        return view('admin.products.create');
+        $catInno = Category::with('children')->catalog(1)->get();
+        $catTeosyal = Category::with('children')->catalog(2)->get();
+
+        return view('admin.products.create', compact('catInno', 'catTeosyal'));
     }
 
     public function store(Request $request)
     {
         $data = $request->all();
-        // validate extra content
+
+        if (!is_numeric($data['catalog_id'])) {
+            return back()->with('message', 'Debes seleccionar un catálogo');
+        }
+
+        // check catalog
+        $catalogId = $data['catalog_id'];
+
+        // fields
         $extraContent = [];
-        if (!empty($data['extra_1'])) {
-            $extraContent['activos'] = $data['extra_1'];
+        $categoryId = 0;
+
+        if ($catalogId == 1) {
+            // INNO
+            // validate extra content
+            if (!empty($data['extra_1'])) {
+                $extraContent['activos'] = $data['extra_1'];
+            }
+            if (!empty($data['extra_2'])) {
+                $extraContent['indicaciones'] = $data['extra_2'];
+            }
+            if (!empty($data['extra_3'])) {
+                $extraContent['protocolo'] = $data['extra_3'];
+            }
         }
-        if (!empty($data['extra_2'])) {
-            $extraContent['indicaciones'] = $data['extra_2'];
+
+        if ($catalogId == 2) {
+            // TEOSYAL
+            // product category...
+            $categoryId = $data['children_cat_teosyal'];
         }
-        if (!empty($data['extra_3'])) {
-            $extraContent['protocolo'] = $data['extra_3'];
-        }
+
         // Create slug url
         $slug = 'producto-' . str_slug($data['name'], '-');
         // Process image
@@ -58,7 +85,7 @@ class ProductsController extends Controller
         $product->content = $data['content'];
         $product->feature_image = $imageName;
         $product->additional_images = '';
-        $product->category_id = 0;
+        $product->category_id = $categoryId;
         $product->catalog_id = $data['catalog_id'];
         $product->featured = isset($data['featured']) ? $data['featured'] : 0;
         $product->active = $data['active'];
@@ -76,22 +103,32 @@ class ProductsController extends Controller
             return redirect(route('admin.products.index'))->with('message', 'El producto no existe.');
         }
 
-        if (!empty($product->extra_fields)) {
-            $extraFields = json_decode($product->extra_fields);
-            if (!empty($extraFields->activos)) {
-                $extra_1 = $extraFields->activos;
+        $categories = Category::with('children')->catalog($product->catalog_id)->get();
+
+        $extra_1 = $extra_2 = $extra_3 = '';
+
+        // Depends on the catalog prepare the view
+        if ($product->catalog_id == self::CATALOG_TEOSYAL) {
+
+            //
+
+        } elseif ($product->catalog_id == self::CATALOG_INNO) {
+
+            if (!empty($product->extra_fields)) {
+                $extraFields = json_decode($product->extra_fields);
+                if (!empty($extraFields->activos)) {
+                    $extra_1 = $extraFields->activos;
+                }
+                if (!empty($extraFields->indicaciones)) {
+                    $extra_2 = $extraFields->indicaciones;
+                }
+                if (!empty($extraFields->protocolo)) {
+                    $extra_3 = $extraFields->protocolo;
+                }
             }
-            if (!empty($extraFields->indicaciones)) {
-                $extra_2 = $extraFields->indicaciones;
-            }
-            if (!empty($extraFields->protocolo)) {
-                $extra_3 = $extraFields->protocolo;
-            }
-        } else {
-            $extra_1 = $extra_2 = $extra_3 = '';
         }
 
-        return view('admin.products.edit', compact('product', 'extra_1', 'extra_2', 'extra_3'));
+        return view('admin.products.edit', compact('product', 'categories', 'extra_1', 'extra_2', 'extra_3'));
     }
 
     public function update(Request $request, $id)
@@ -132,7 +169,7 @@ class ProductsController extends Controller
         $product->name = $data['name'];
         $product->slug = $slug;
         $product->content = $data['content'];
-        $product->catalog_id = $data['catalog_id'];
+        //$product->catalog_id = $data['catalog_id'];
         $product->featured = isset($data['featured']) ? $data['featured'] : 0;
         $product->active = $data['active'];
         if (!empty($extraContent)) {

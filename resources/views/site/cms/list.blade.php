@@ -30,7 +30,10 @@
 	                                                        <article id="post-859" class="post-859 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-fit-row">
 	                                                            <div class="gdlr-standard-style">
 	                                                                <div class="gdlr-blog-thumbnail">
-	                                                                    <a href="../index.html?p=859"> <img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/photodune-2917544-beauty-portrait-curly-hair-m-1024x708.jpg" alt="" width="960" height="664" /></a>
+	                                                                    <a href="/{{ $item->category->slug }}/{{ $item->slug }}">
+																			<img src="/uploads/posts/{{ $item->banner or 'empty-post.jpg' }}" alt="{{ $item->title }}" width="960" height="664" />
+																			<!--<img src="http://cdn-second.goodlayers.com/skinbeauty/wp-content/uploads/2013/12/photodune-2917544-beauty-portrait-curly-hair-m-1024x708.jpg" alt="" width="960" height="664" />-->
+																		</a>
 	                                                                    <!--<div class="gdlr-sticky-banner"><i class="fa fa-bullhorn"></i>Sticky Post</div>-->
 	                                                                </div>
 	                                                                <div class="gdlr-blog-date-wrapper">
@@ -49,7 +52,7 @@
 	                                                                    </header>
 	                                                                    <!-- entry-header -->
 	                                                                    <div class="gdlr-blog-content">
-	                                                                    	{{ $item->body }}
+	                                                                    	{!! str_limit($item->body, 150, '...') !!}
 	                                                                        <div class="clear"></div>
 	                                                                        <a href="/{{ $item->category->slug }}/{{ $item->slug }}" class="gdlr-button small excerpt-read-more">Leer Más</a>
 	                                                                    </div>
